@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Oportunidades - Gurupi TO</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">Portal de Oportunidades</h1>
+                <nav class="nav">
+                    <button onclick="showPage('home')" class="nav-btn active" id="nav-home">Home</button>
+                    <button onclick="showPage('vagas')" class="nav-btn" id="nav-vagas">Vagas</button>
+                    <button onclick="showPage('cursos')" class="nav-btn" id="nav-cursos">Cursos</button>
+                    <button class="nav-btn login-btn">Login</button>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Home Page -->
+            <div id="home-page" class="page active">
+                <div class="home-content">
+                    <section class="hero">
+                        <h1>Portal de Oportunidades Gratuitas</h1>
+                        <p>Conectando pessoas a oportunidades de emprego e capacitação em Gurupi - TO</p>
+                        <div class="hero-buttons">
+                            <button onclick="showPage('vagas')" class="btn-primary">Ver Vagas</button>
+                            <button onclick="showPage('cursos')" class="btn-secondary">Ver Cursos</button>
+                        </div>
+                    </section>
+                    
+                    <section class="stats">
+                        <div class="stat-item">
+                            <h3>150+</h3>
+                            <p>Vagas Disponíveis</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>50+</h3>
+                            <p>Cursos Gratuitos</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>1000+</h3>
+                            <p>Usuários Cadastrados</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Vagas Page -->
+            <div id="vagas-page" class="page">
+                <div class="page-content">
+                    <h2>Vagas de Emprego Disponíveis</h2>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Buscar por cargo..." id="search-vagas">
+                        <button class="btn-search" onclick="searchVagas()">Buscar</button>
+                    </div>
+                    <div class="cards-grid" id="vagas-grid">
+                        <!-- Vagas serão inseridas aqui via JavaScript -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cursos Page -->
+            <div id="cursos-page" class="page">
+                <div class="page-content">
+                    <h2>Cursos Gratuitos Disponíveis</h2>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Buscar por curso..." id="search-cursos">
+                        <button class="btn-search" onclick="searchCursos()">Buscar</button>
+                    </div>
+                    <div class="cards-grid" id="cursos-grid">
+                        <!-- Cursos serão inseridos aqui via JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2025 Portal de Oportunidades Gratuitas - Gurupi, TO. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
